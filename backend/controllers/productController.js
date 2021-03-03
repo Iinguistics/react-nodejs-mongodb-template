@@ -26,7 +26,6 @@ const getProducts = asyncHandler(async(req,res)=>{
 
 // Delete product
 //@route  DELETE api/products/remove/:id
-//@access Private/Admin
 const deleteProduct = asyncHandler(async(req,res)=>{
    const product = await Product.findByIdAndDelete(req.params.id);
 
@@ -42,19 +41,15 @@ const deleteProduct = asyncHandler(async(req,res)=>{
 
 // Create a product
 //@route  POST api/products
-//@access Private/Admin
 const createProduct = asyncHandler(async(req,res)=>{
     const product = new Product({
-        name: 'New product',
-        price: 0,
-        brand: 'Sample brand',
-        countInStock: 0
+        name: req.body.name,
+        price: req.body.price,
+        brand: req.body.brand,
     });
     
     const createdProduct = await product.save();
     res.status(201).json(createdProduct);
  });
-
-
 
 module.exports = { getProducts, getProductById, deleteProduct, createProduct }
