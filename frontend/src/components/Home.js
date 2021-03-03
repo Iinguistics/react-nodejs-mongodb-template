@@ -16,7 +16,7 @@ const Home = () => {
   }, []);
    
         const renderProducts = ()=>{
-            if(products !== null){
+            if(products){
                 return products.map((item)=>{
                     return (
                         <div key={item._id}>
@@ -26,10 +26,6 @@ const Home = () => {
                         </div>
                     )
                 })
-            }else{
-                return (
-                    <h1>No products</h1>
-                )
             }
         }
 
