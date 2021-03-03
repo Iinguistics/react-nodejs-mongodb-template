@@ -25,13 +25,13 @@ const Create = ({ history }) => {
             <GoBack history = {history} />
             <h1>Create a new product</h1>
               <form onSubmit={submitHandler}>
-                <div classNameName="mb-3">
+                <div className="mb-3">
                     <label className="form-label">Name</label>
                     <input type="text" className="form-control"  
                      value={name} 
                      onChange={(e)=> setName(e.target.value)}/>
                 </div>
-                <div classNameName="mb-3">
+                <div className="mb-3">
                     <label className="form-label">Price</label>
                     <input type="text" className="form-control"  
                      value={price} 

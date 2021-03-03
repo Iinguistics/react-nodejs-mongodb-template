@@ -19,8 +19,8 @@ const Home = () => {
             if(products !== null){
                 return products.map((item)=>{
                     return (
-                        <div>
-                            <h3>Name: {item.name}</h3>
+                        <div key={item._id}>
+                           <Link to={`/product/${item._id}`}><h3>{item.name}</h3></Link> 
                             <h5>Price$: {item.price}</h5>
                             <h5>Brand: {item.brand}</h5>
                         </div>
@@ -35,7 +35,8 @@ const Home = () => {
 
 
     return (
-        <div>
+        <div className="my-5">
+            <Link to="/create"><input type="submit" value="Create a product" className="btn btn-dark mb-4"/></Link>
             <h1>Products</h1>
             {renderProducts()}
              
