@@ -1,10 +1,18 @@
-import { useEffect, useState } from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import Home from './components/Home';
+import Create from './components/Create';
+
 
 function App() {
   return (
-    <div className="container">
-      <h1>Hi there</h1>
-    </div>
+    <Router>
+      <div className="container">
+      <Route path="/" exact component={Home} />
+      <Route path="/create" exact component={Create} />
+      </div>
+      
+
+    </Router>
   );
 }
 
