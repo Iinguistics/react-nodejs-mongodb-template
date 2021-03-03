@@ -11,8 +11,6 @@ function App() {
       <Route path="/create" exact component={Create} />
       <Route path="/product/:id"  component={Product} />
       </div>
-      
-
     </Router>
   );
 }
