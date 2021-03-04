@@ -35,7 +35,6 @@ const Home = () => {
             <Link to="/create"><input type="submit" value="Create a product" className="btn btn-dark mb-4"/></Link>
             <h1>Products</h1>
             {renderProducts()}
-             
         </div>
     )
 }

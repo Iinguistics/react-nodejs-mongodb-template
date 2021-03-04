@@ -32,7 +32,7 @@ const Product = ({ match, history }) => {
 
     return (
         <div className="my-5">
-          <GoBack history = {history} />
+          <GoBack />
             {product && (
                 <div>
                   <h3>{product.name}</h3>

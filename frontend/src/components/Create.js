@@ -8,9 +8,8 @@ const Create = ({ history }) => {
     const [brand, setBrand] = useState("");
 
 
-
   const submitHandler = async (e)=>{
-      e.preventDefault();
+     e.preventDefault();
      await axios.post('/api/products', {
           name,
           price,
@@ -22,7 +21,7 @@ const Create = ({ history }) => {
   
     return (
         <div className="my-5">
-            <GoBack history = {history} />
+            <GoBack />
             <h1>Create a new product</h1>
               <form onSubmit={submitHandler}>
                 <div className="mb-3">
